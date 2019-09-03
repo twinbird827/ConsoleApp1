@@ -113,5 +113,16 @@ namespace ConsoleApp1
                 .Replace("-", "")
                 .PadRight(length, '0');
         }
+
+        /// <summary>
+        /// 2進数文字を16進数文字に変換します。
+        /// </summary>
+        /// <param name="s">2進数文字</param>
+        /// <param name="length">16進数文字変換後の文字長さ</param>
+        /// <returns></returns>
+        public static string Bin2Hex(this string s, int length = 4)
+        {
+            return Convert.ToInt32(s, 2).ToHex(length);
+        }
     }
 }
